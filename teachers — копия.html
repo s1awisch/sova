@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Преподаватели - Репетиторский центр "Сова"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/owl-logo.png" alt="Логотип Совы">
+                <h1>Сова</h1>
+            </div>
+            <nav class="nav">
+                <button class="mobile-menu-btn">☰</button>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="courses.html">Курсы</a></li>
+                    <li><a href="teachers.html" class="active">Преподаватели</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="teachers-intro">
+        <div class="container">
+            <h2>Наши преподаватели</h2>
+            <p>В нашем центре работают только опытные педагоги с высшим образованием и подтверждённой квалификацией. Мы тщательно отбираем преподавателей, чтобы гарантировать качество обучения.</p>
+        </div>
+    </section>
+
+    <section class="teachers-filter">
+        <div class="container">
+            <div class="filter-options">
+                <select id="subject-filter">
+                    <option value="all">Все предметы</option>
+                    <option value="math">Математика</option>
+                    <option value="russian">Русский язык</option>
+                    <option value="english">Английский язык</option>
+                    <option value="physics">Физика</option>
+                    <option value="chemistry">Химия</option>
+                </select>
+                
+                <select id="experience-filter">
+                    <option value="all">Любой опыт</option>
+                    <option value="5">От 5 лет</option>
+                    <option value="10">От 10 лет</option>
+                    <option value="15">От 15 лет</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="teachers-list">
+        <div class="container">
+            <div class="teachers-grid">
+                <!-- Преподаватель 1 -->
+                <div class="teacher-card" data-subject="math,physics" data-experience="12">
+                    <div class="teacher-photo">
+                        <img src="images/teacher1.jpg" alt="Иванов Сергей Петрович">
+                        <div class="teacher-subjects">
+                            <span>Математика</span>
+                            <span>Физика</span>
+                        </div>
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Иванов Сергей Петрович</h3>
+                        <p class="teacher-exp">Опыт: 12 лет</p>
+                        <p class="teacher-edu">Образование: МГУ, механико-математический факультет</p>
+                        <p class="teacher-desc">Кандидат физико-математических наук. Эксперт ЕГЭ. Подготовил 15 стобалльников.</p>
+                        <a href="#" class="btn btn-small" data-teacher="1">Записаться к преподавателю</a>
+                    </div>
+                </div>
+                
+                <!-- Преподаватель 2 -->
+                <div class="teacher-card" data-subject="russian" data-experience="8">
+                    <div class="teacher-photo">
+                        <img src="images/teacher2.jpg" alt="Смирнова Анна Владимировна">
+                        <div class="teacher-subjects">
+                            <span>Русский язык</span>
+                        </div>
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Смирнова Анна Владимировна</h3>
+                        <p class="teacher-exp">Опыт: 8 лет</p>
+                        <p class="teacher-edu">Образование: МПГУ, филологический факультет</p>
+                        <p class="teacher-desc">Специалист по подготовке к итоговому сочинению и ЕГЭ. Автор методики развития письменной речи.</p>
+                        <a href="#" class="btn btn-small" data-teacher="2">Записаться к преподавателю</a>
+                    </div>
+                </div>
+                
+                <!-- Преподаватель 3 -->
+                <div class="teacher-card" data-subject="english" data-experience="10">
+                    <div class="teacher-photo">
+                        <img src="images/teacher3.jpg" alt="Кузнецова Елена Дмитриевна">
+                        <div class="teacher-subjects">
+                            <span>Английский язык</span>
+                        </div>
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Кузнецова Елена Дмитриевна</h3>
+                        <p class="teacher-exp">Опыт: 10 лет</p>
+                        <p class="teacher-edu">Образование: МГЛУ, факультет английской филологии</p>
+                        <p class="teacher-desc">Сертифицированный преподаватель (CELTA). Специалист по подготовке к IELTS и TOEFL.</p>
+                        <a href="#" class="btn btn-small" data-teacher="3">Записаться к преподавателю</a>
+                    </div>
+                </div>
+                
+                <!-- Преподаватель 4 -->
+                <div class="teacher-card" data-subject="math" data-experience="15">
+                    <div class="teacher-photo">
+                        <img src="images/teacher4.jpg" alt="Петров Дмитрий Игоревич">
+                        <div class="teacher-subjects">
+                            <span>Математика</span>
+                        </div>
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Петров Дмитрий Игоревич</h3>
+                        <p class="teacher-exp">Опыт: 15 лет</p>
+                        <p class="teacher-edu">Образование: МФТИ, факультет управления и прикладной математики</p>
+                        <p class="teacher-desc">Специалист по олимпиадной математике. Тренер сборной Москвы по математике.</p>
+                        <a href="#" class="btn btn-small" data-teacher="4">Записаться к преподавателю</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="teacher-cta">
+        <div class="container">
+            <h3>Хотите стать частью нашей команды?</h3>
+            <p>Мы всегда рады талантливым преподавателям. Присылайте ваше резюме!</p>
+            <a href="contacts.html" class="btn btn-large">Отправить резюме</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="images/owl-logo.png" alt="Логотип Совы">
+                    <h3>Репетиторский центр "Сова"</h3>
+                </div>
+                <p>© 2023 Все права защищены</p>
+            </div>
+            <div class="footer-links">
+                <h4>Контакты</h4>
+                <p>г. Москва, ул. Образцова, 35</p>
+                <p>+7 (495) 123-45-67</p>
+                <p>info@sova-center.ru</p>
+            </div>
+            <div class="footer-social">
+                <h4>Мы в соцсетях</h4>
+                <a href="#"><img src="images/vk-icon.png" alt="ВКонтакте"></a>
+                <a href="#"><img src="images/telegram-icon.png" alt="Telegram"></a>
+                <a href="#"><img src="images/whatsapp-icon.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/teachers.js"></script>
+</body>
+</html>

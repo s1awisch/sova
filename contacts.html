@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Репетиторский центр "Сова"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/owl-logo.png" alt="Логотип Совы">
+                <h1>Репетиторский центр «Сова»</h1>
+            </div>
+            <nav class="nav">
+                <button class="mobile-menu-btn">☰</button>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="courses.html">Курсы</a></li>
+                    <li><a href="teachers.html">Преподаватели</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-info">
+        <div class="container">
+            <h2>Наши контакты</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <img src="images/icon-address.png" alt="Адрес">
+                    <h3>Адрес</h3>
+                    <p>г. Кубинка, Городок Кубинка-8, Дом 26</p>
+                    <p>2 этаж</p>
+                </div>
+                <div class="contact-card">
+                    <img src="images/icon-phone.png" alt="Телефон">
+                    <h3>Телефон</h3>
+                    <p>+7 (964) 571-50-08</p>
+                    <p>(WhatsApp, Telegram)</p>
+                </div>
+                <div class="contact-card">
+                    <img src="images/icon-email.png" alt="Email">
+                    <h3>Email</h3>
+                    <p>info@sova-center.ru</p>
+                    <p>zapis@sova-center.ru (для записи)</p>
+                </div>
+                <div class="contact-card">
+                    <img src="images/icon-clock.png" alt="Часы работы">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 20:00</p>
+                    <p>Сб-Вс: 10:00 - 18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-map">
+        <div class="container">
+            <h3>Как нас найти</h3>
+            <div class="location-image">
+    <img src="images/map.png" alt="Наш репетиторский центр по адресу г. Москва, ул. Образцова, 35">
+    <div class="location-overlay">
+        <h3>Как нас найти</h3>
+        <p>г. Кубинка, Городок Кубинка-8, Дом 26</p>
+        <p>2 этаж</p>
+        <a href="https://yandex.ru/maps/-/CHHDqR20" class="btn btn-small">Открыть в Яндекс.Картах</a>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <h2>Остались вопросы?</h2>
+            <p class="subtitle">Заполните форму, и мы свяжемся с вами в течение дня</p>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Ваше имя *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Тема обращения</label>
+                    <select id="subject" name="subject">
+                        <option value="question">Общий вопрос</option>
+                        <option value="registration">Запись на курс</option>
+                        <option value="teacher">Выбор преподавателя</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Сообщение *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Я согласен на обработку персональных данных</label>
+                </div>
+                
+                <button type="submit" class="btn btn-large">Отправить сообщение</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <h3>Репетиторский центр "Сова"</h3>
+                </div>
+                <p>© 2025 Все права защищены</p>
+            </div>
+            <div class="footer-links">
+                <h4>Контакты</h4>
+                <p>г. Кубинка, Городок Кубинка-8, Дом 26</p>
+                <p>+7 (964) 571-50-08</p>
+            </div>
+            <div class="footer-social">
+                <h4>Мы в соцсетях</h4>
+                <a href="#"><img src="images/vk.png" alt="ВКонтакте"></a>
+                <a href="#"><img src="images/tg.png" alt="Telegram"></a>
+                <a href="#"><img src="images/whts.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contacts.js"></script>
+</body>
+</html>

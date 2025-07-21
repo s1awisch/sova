@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы - Репетиторский центр "Сова"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/owl-logo.png" alt="Логотип Совы">
+                <h1>Репетиторский центр «Сова»</h1>
+            </div>
+            <nav class="nav">
+                <button class="mobile-menu-btn">☰</button>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="courses.html" class="active">Курсы</a></li>
+                    <li><a href="teachers.html">Преподаватели</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="courses-main">
+        <div class="container">
+            <h2>Наши курсы</h2>
+            <p class="subtitle">Выберите направление, которое вам интересно</p>
+            
+            <div class="course-categories">
+                <button class="category-btn active" data-category="all">Все курсы</button>
+                <button class="category-btn" data-category="school">Школьная программа</button>
+                <button class="category-btn" data-category="exam">Подготовка к экзаменам</button>
+                <button class="category-btn" data-category="language">Иностранные языки</button>
+            </div>
+            
+            <div class="all-courses">
+                <!-- Математика -->
+                <div class="course-detail" id="math" data-category="school,exam">
+                    <div class="course-header">
+                        <h3>Математика</h3>
+                        <span class="course-price">от 1500 руб./занятие</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-image">
+                            <img src="images/math.png" alt="Математика">
+                        </div>
+                        <div class="course-info">
+                            <h4>Описание курса:</h4>
+                            <p>Комплексная программа по математике для школьников 5-11 классов. Помощь в освоении школьной программы, подготовка к ОГЭ и ЕГЭ, олимпиадная математика.</p>
+                            
+                            <h4>Для кого:</h4>
+                            <ul>
+                                <li>Школьники 5-11 классов</li>
+                                <li>Абитуриенты</li>
+                                <li>Студенты начальных курсов</li>
+                            </ul>
+                            
+                            <h4>Формат занятий:</h4>
+                            <div class="course-format">
+                                <span>Индивидуально</span>
+                                <span>В группах (2-8 чел.)</span>
+                                <span>Онлайн</span>
+                            </div>
+                            
+                            <a href="contacts.html" class="btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Русский язык -->
+                <div class="course-detail" id="russian" data-category="school,exam">
+                    <div class="course-header">
+                        <h3>Русский язык</h3>
+                        <span class="course-price">от 1200 руб./занятие</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-image">
+                            <img src="images/rus.png" alt="Русский язык">
+                        </div>
+                        <div class="course-info">
+                            <h4>Описание курса:</h4>
+                            <p>Курс русского языка направлен на повышение грамотности, развитие письменной и устной речи, подготовку к итоговым сочинениям и экзаменам.</p>
+                            
+                            <h4>Для кого:</h4>
+                            <ul>
+                                <li>Школьники 1-11 классов</li>
+                                <li>Абитуриенты</li>
+                                <li>Взрослые, желающие повысить грамотность</li>
+                            </ul>
+                            
+                            <h4>Формат занятий:</h4>
+                            <div class="course-format">
+                                <span>Индивидуально</span>
+                                <span>В группах (2-8 чел.)</span>
+                            </div>
+                            
+                            <a href="contacts.html" class="btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Английский язык -->
+                <div class="course-detail" id="english" data-category="language,exam">
+                    <div class="course-header">
+                        <h3>Английский язык</h3>
+                        <span class="course-price">от 1400 руб./занятие</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-image">
+                            <img src="images/eng.png" alt="Английский язык">
+                        </div>
+                        <div class="course-info">
+                            <h4>Описание курса:</h4>
+                            <p>Комплексное изучение английского языка: грамматика, лексика, разговорная практика. Подготовка к ОГЭ, ЕГЭ, международным экзаменам (IELTS, TOEFL).</p>
+                            
+                            <h4>Для кого:</h4>
+                            <ul>
+                                <li>Школьники любого возраста</li>
+                                <li>Абитуриенты</li>
+                                <li>Взрослые</li>
+                            </ul>
+                            
+                            <h4>Формат занятий:</h4>
+                            <div class="course-format">
+                                <span>Индивидуально</span>
+                                <span>В группах (2-8 чел.)</span>
+                                <span>Онлайн</span>
+                            </div>
+                            
+                            <a href="contacts.html" class="btn">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Другие курсы можно добавить по аналогии -->
+            </div>
+        </div>
+    </section>
+
+    <section class="course-cta">
+        <div class="container">
+            <h3>Не нашли нужный курс?</h3>
+            <p>Мы проводим занятия по всем школьным предметам. Оставьте заявку, и мы подберём для вас подходящую программу!</p>
+            <a href="contacts.html" class="btn btn-large">Оставить заявку</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <h3>Репетиторский центр "Сова"</h3>
+                </div>
+                <p>© 2025 Все права защищены</p>
+            </div>
+            <div class="footer-links">
+                <h4>Контакты</h4>
+                <p>г. Кубинка, Городок Кубинка-8, Дом 26</p>
+                <p>+7 (964) 571-50-08</p>
+            </div>
+            <div class="footer-social">
+                <h4>Мы в соцсетях</h4>
+                <a href="#"><img src="images/vk.png" alt="ВКонтакте"></a>
+                <a href="#"><img src="images/tg.png" alt="Telegram"></a>
+                <a href="#"><img src="images/whts.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+</html>
