@@ -1,48 +1,53 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
     
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+    // Сохраняем исходный текст кнопки
+    const originalBtnText = submitBtn.textContent;
+    
+    // Показываем загрузку
+    submitBtn.textContent = 'Отправка...';
+    submitBtn.disabled = true;
+    
+    // Отправляем форму
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Показываем успех
+            submitBtn.textContent = '✓ Отправлено!';
+            form.reset();
             
-            // Здесь должна быть реальная валидация и отправка формы
-            // В данном примере просто имитируем успешную отправку
+            // Можно показать дополнительное сообщение
+            const alert = document.createElement('div');
+            alert.className = 'form-alert';
+            alert.textContent = 'Спасибо! Мы свяжемся с вами в ближайшее время.';
+            form.appendChild(alert);
             
-            // Собираем данные формы
-            const formData = new FormData(contactForm);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-            
-            console.log('Данные формы:', data);
-            
-            // Показываем сообщение об успехе
-            alert('Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.');
-            
-            // Очищаем форму
-            contactForm.reset();
-            
-            // В реальном проекте здесь будет AJAX-запрос к серверу
-            /*
-            fetch('sendmail.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('Сообщение отправлено!');
-                    contactForm.reset();
-                } else {
-                    alert('Ошибка: ' + data.message);
-                }
-            })
-            .catch(error => {
-                alert('Произошла ошибка при отправке формы');
-                console.error(error);
-            });
-            */
-        });
-    }
+            setTimeout(() => {
+                alert.style.opacity = '0';
+                setTimeout(() => alert.remove(), 500);
+            }, 3000);
+        } else {
+            throw new Error('Ошибка отправки');
+        }
+    })
+    .catch(error => {
+        // Показываем ошибку
+        submitBtn.textContent = 'Ошибка!';
+        alert('Произошла ошибка при отправке. Пожалуйста, попробуйте позже.');
+    })
+    .finally(() => {
+        // Через 3 секунды возвращаем кнопку в исходное состояние
+        setTimeout(() => {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+        }, 3000);
+    });
 });
