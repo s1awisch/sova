@@ -16,14 +16,14 @@
 }
 
 @font-face {
-    font-family: 'RazerF5';
-    src: url('../fonts/dehinted-RazerF5-Regular.ttf') format('opentype');
+    font-family: 'NTSomic';
+    src: url('../fonts/NTSomic-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'RazerF5', Arial, sans-serif;
+    font-family: 'INTSomic', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
 }
